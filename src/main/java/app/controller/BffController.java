@@ -1,7 +1,6 @@
 package app.controller;
 
 import app.model.Fair;
-import app.model.User;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
@@ -19,19 +18,6 @@ import java.util.*;
 @RequestMapping("/")
 @AllArgsConstructor
 public class BffController {
-
-
-    //Não está funcionando. Está retornando nulo.
-    @GetMapping("getUser")
-    @JsonFormat
-    public String getUser() {
-
-        var template = new RestTemplate();
-
-        ResponseEntity<User> userResponseEntity = template.getForEntity("http://localhost:8070/authentication", User.class);
-
-        return userResponseEntity.getBody().getName();
-    }
 
     @GetMapping("fairs")
     @JsonFormat
