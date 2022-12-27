@@ -1,0 +1,4 @@
+app/model/Fair.class
+app/model/User.class
+app/controller/BffController.class
+app/App.class
